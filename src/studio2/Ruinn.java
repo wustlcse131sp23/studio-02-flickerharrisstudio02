@@ -25,10 +25,11 @@ int initial = startAmount;
 		Scanner e = new Scanner(System.in);
 		int totalSimulations = e.nextInt();
 		
+		
 		for (int j = 1; j <= totalSimulations; j++) {
 			int x = 0;
-	
-			while ((initial != winLimit) && (initial > 0)) {
+			startAmount = initial;
+			while ((startAmount != winLimit) && (startAmount > 0)) {
 
 				if (winChance >= Math.random()) {
 
@@ -43,7 +44,7 @@ int initial = startAmount;
 				++x;
 			}
 
-			if (initial == winLimit) {
+			if (startAmount == winLimit) {
 				System.out.println("You have reached your limit." + winLimit + " was made. This was simulation "
 						+ j + "Success!");
 			} else {
